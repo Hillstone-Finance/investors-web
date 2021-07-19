@@ -7,8 +7,8 @@
     }
 </style>
 
-<img id="blogo" src="https://github.com/Gymmon/fitcok-server/blob/master/docs/logo_black.png?raw=true" width="200px">
-<img id="wlogo" src="https://github.com/Gymmon/fitcok-server/blob/master/docs/logo_white.png?raw=true" width="200px">
+<img id="blogo" style="@media (prefers-color-scheme: dark) { display: none; }"  src="https://github.com/Hillstone-Finance/investors-web/blob/master/docs/logo_black.png?raw=true" width="200px">
+<img id="wlogo" style="display: none; @media (prefers-color-scheme: dark) { display: block; }" src="https://github.com/Hillstone-Finance/investors-web/blob/master/docs/logo_white.png?raw=true" width="200px">
 
 
 # Investors Web
