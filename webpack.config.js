@@ -1,3 +1,10 @@
+/* 
+ * Copyright Hillstone Finance - All Rights Reserved
+ * Unauthorized copying of this file, via any medium is strictly prohibited
+ * Proprietary and confidential
+ * Written by Jasper Lee <dev@hillstone.finance>, July 2021
+ */
+
 // Imports
 const path = require('path')
 const Dotenv = require('dotenv-webpack')
@@ -34,7 +41,11 @@ module.exports = webpackEnv => {
                 {
                     test: /\.css/,
                     exclude: /node_modules/,
-                    use: [MiniCssExtractPlugin.loader, 'css-loader']
+                    use: [
+                        MiniCssExtractPlugin.loader, 
+                        "css-loader",
+                        "postcss-loader"
+                    ]
                 },
                 {
                     test: /\.(png|jpe?g|gif|svg)$/,

@@ -5,6 +5,16 @@
  * Written by Jasper Lee <dev@hillstone.finance>, July 2021
  */
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+module.exports = {
+  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+  darkMode: 'class',
+  theme: {
+    extend: {},
+  },
+  variants: {
+    extend: {
+      display: ['dark'],
+    },
+  },
+  plugins: [],
+}

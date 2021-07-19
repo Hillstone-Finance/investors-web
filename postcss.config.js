@@ -5,6 +5,9 @@
  * Written by Jasper Lee <dev@hillstone.finance>, July 2021
  */
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+module.exports = {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  }
+}

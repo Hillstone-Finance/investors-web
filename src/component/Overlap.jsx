@@ -5,6 +5,11 @@
  * Written by Jasper Lee <dev@hillstone.finance>, July 2021
  */
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+import "../stylesheets/common.css"
+
+export default function Overlap() {
+    return (
+        <div className="absolute z-0 w-screen h-96 bg-yellow-400">
+        </div>
+    )
+}
