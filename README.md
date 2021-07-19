@@ -1,14 +1,4 @@
-<style>
-    #blogo { display: default; }
-    #wlogo { display: none; }
-    @media (prefers-color-scheme: dark) {
-        #blogo { display: none; }
-        #wlogo { display: default; }
-    }
-</style>
-
-<img id="blogo" style="@media (prefers-color-scheme: dark) { display: none; }"  src="https://github.com/Hillstone-Finance/investors-web/blob/master/docs/logo_black.png?raw=true" width="200px">
-<img id="wlogo" style="display: none; @media (prefers-color-scheme: dark) { display: block; }" src="https://github.com/Hillstone-Finance/investors-web/blob/master/docs/logo_white.png?raw=true" width="200px">
+<img src="https://github.com/Hillstone-Finance/investors-web/blob/master/docs/logo_white.png?raw=true" width="400px">
 
 
 # Investors Web
