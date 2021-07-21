@@ -7,6 +7,9 @@
 
 import "../stylesheets/common.css"
 import AssetTable from "./AssetTable"
+import MyDeposit from "./MyDeposit"
+
+import { Route, Link, Switch } from "react-router-dom";
 
 export default function Deposit() {
     return (
@@ -35,18 +38,16 @@ export default function Deposit() {
                         <div class="sm:flex sm:items-baseline">
                             <div class="mt-4 sm:mt-0">
                                 <nav class="-mb-px flex space-x-8">
-                                    <a href="#" class="border-transparent hover:text-indigo-600 hover:border-indigo-500 border-grey-500 text-indigo-600 whitespace-nowrap pb-4 px-1 border-b-2 font-bold" aria-current="page">
-                                        Browse All
-                                    </a>
-                                    <a href="#" class="border-transparent text-black-500 hover:text-indigo-600 hover:border-indigo-500 whitespace-nowrap pb-4 px-1 border-b-2 font-bold">
-                                        My Deposits
-                                    </a>
+                                    <Link to="/deposit/all" className="border-transparent hover:text-indigo-600 hover:border-indigo-500 border-grey-500 text-indigo-600 whitespace-nowrap pb-4 px-1 border-b-2 font-bold">Browse All</Link>
+                                    <Link to="/deposit/mypage" className="border-transparent text-black-500 hover:text-indigo-600 hover:border-indigo-500 whitespace-nowrap pb-4 px-1 border-b-2 font-bold">My Deposits</Link>
                                 </nav>
                             </div>
                         </div>
                     </div>
-
-                    <AssetTable />
+                    <Switch>
+                        <Route exact path="/deposit/all" component={AssetTable}></Route>
+                        <Route exact path="/deposit/mypage" component={MyDeposit}></Route>
+                    </Switch>
                 </div>
             </main>
         </div>
