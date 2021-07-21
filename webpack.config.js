@@ -27,7 +27,8 @@ module.exports = webpackEnv => {
         entry: path.resolve(SRC_PATH, 'index.jsx'),
         output: {
             path: BUILD_PATH,
-            filename: isEnvDevelopment ? 'js/[name].[contenthash:8].js' : 'js/bundle.js'
+            filename: isEnvDevelopment ? 'js/[name].[contenthash:8].js' : 'js/bundle.js',
+            publicPath: '/'
         },
         module: {
             rules: [
@@ -79,6 +80,7 @@ module.exports = webpackEnv => {
             watchOptions: {
                 poll: true
             },
+            hot: true,
             historyApiFallback: true, 
         }
     }
