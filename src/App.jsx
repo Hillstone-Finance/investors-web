@@ -6,6 +6,7 @@
  */
 
 import "./App.css"
+import Banner from './component/Banner'
 import Header from './component/Header'
 import Overlap from './component/Overlap'
 import Deposit from './component/Deposit'
@@ -18,6 +19,7 @@ export default function App() {
 		<ThemeProvider>
 			<Overlap />
 			<div className="absolute z-20 w-screen">
+				<Banner />
 				<Header />
 				<Switch>
 					<Route exact path="/"> <Redirect to="/deposit/all" /> </Route>

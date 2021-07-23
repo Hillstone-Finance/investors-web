@@ -70,12 +70,12 @@ const funds = [
                                     >
                                         Depositors
                                     </th>
-                                    
+                                    <th scope="col" className="flex items-stretch relative p-0 justify-start text-left sr-only" style={{ boxSizing: "border-box", minWidth: 0, width: 0}}><span class="inline-flex items-center">Actions</span></th>
                                 </tr>
                             </thead>
                             <tbody className="bg-white divide-y divide-gray-200">
                                 {funds.map((fund) => (
-                                    <tr key={fund.id}>
+                                    <tr key={fund.id} className="group hover:bg-gray-200 focus-within:bg-gray-200 relative items-center">
                                         <td className="px-6 py-4 whitespace-nowrap">
                                             <div className="flex items-center">
                                                 <div className="flex-shrink-0 h-10 w-10">
@@ -111,6 +111,15 @@ const funds = [
                                             <div className="text-sm text-gray-500">{(fund.capacity - fund.funded).toLocaleString("en-US")+" "+fund.denomination} Left</div>
                                         </td>
                                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{fund.depositors}</td>
+                                        <td class="flex items-stretch text-sm font-medium justify-start text-left"  style={{boxSizing: "border-box", minWidth: 0,width: 0}}>
+                                            <div className="absolute inset-y-0 right-6 flex items-center justify-end">
+                                                <span className="opacity-0 scale-90 group-hover:opacity-100 group-hover:scale-100 focus-within:opacity-100 focus-within:scale-100 transition">
+                                                    <a className="flex-shrink-0 inline-flex items-center justify-center disabled:opacity-50 disabled:cursor-default border focus:outline-none focus:ring-2 focus:ring-purple-500 dark:focus:ring-purple-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900 transition bg-purple-500 dark:bg-purple-500 active:bg-purple-500 dark:active:bg-purple-500 border-transparent font-medium hover:bg-purple-600 dark:hover:bg-purple-400 px-4 py-2 rounded-md shadow-sm text-sm text-white dark:text-white" href="/vault/0x86fb84e92c1eedc245987d28a42e123202bd6701/overview">
+                                                        <span class="flex-1 flex items-center justify-center space-x-2">View Details</span>
+                                                    </a>
+                                                </span>
+                                            </div>
+                                        </td>
                                     </tr>
                                 ))}
                             </tbody>
